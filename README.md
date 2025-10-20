@@ -16,7 +16,8 @@ git clone https://github.com/debozkurt/intro-to-langsmith-lab.git
 ```
 ### Create your .env file: 
 ```
-mv .env.example .env
+$ cd intro-to-langsmith-lab/
+$ mv .env.example .env
 ```
 
 ### Sign up for LangSmith
@@ -41,14 +42,20 @@ export LANGSMITH_PROJECT=<your_tracing_project_title>
 export OPENAI_API_KEY=<your-openai-api-key>
 ```
 
-### Create an environment and install dependencies
+### Create an environment and install dependencies (do this only once)
 ```
 $ cd intro-to-langsmith-lab/
 $ python3 -m venv intro-to-ls
 $ source intro-to-ls/bin/activate
 $ pip install -r requirements.txt
 ```
-### Open **intro-to-langsmith-lab/notebooks/module_1/1_tracing_basics.ipynb** up in your IDE or Jupyter Notebook manager of choice
+For subsequent usage, activate your python environment from intro-to-langsmith-lab/: 
+```
+source intro-to-ls/bin/activate
+```
+. . and select it for use with your notebooks.
+
+#### Open **intro-to-langsmith-lab/notebooks/module_1/1_tracing_basics.ipynb** up in your IDE or Jupyter Notebook manager of choice
 
 ### Self-Hosted LangSmith
 Note: If you are using a self-hosted version of LangSmith, you'll need to set this environment variable in addition to the others - see this [guide](https://docs.smith.langchain.com/self_hosting/usage) for more info
